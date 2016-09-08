@@ -1,0 +1,111 @@
+// Плохо! А произошло, потомучто мне надо отметить первый блок с портфолио
+// тенью сверху
+.section--portfolio:nth-child(4){
+    box-shadow: 0 0 30px rgba(0,0,0,.05);
+}
+
+.portfolio-items{
+    position: relative;
+    padding: 0;
+    // padding: 30px;
+    &.portfolio-items--quadra{
+        &:first-child{
+            // padding-right: 7.5px;
+            border-right: 1px solid #f1f1f1
+        }
+        &:not(:first-child){
+            // padding-left: 7.5px;
+        }
+    }
+}
+
+// Переназвать понятнее, как название преимущества
+.portfolio-title{
+    position: absolute;
+    background-color: #fff;
+    padding: 30px 45px;
+    top:50%;
+    left: -75px;
+    margin-left: 30px;
+    transform: translateY(-50%);
+    // border: 1px solid #f1f1f1;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-title--center{
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.portfolio-item{
+    background-color: #fff;
+    width: 100%;
+    min-height: 550px;
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+    color: #fff;
+
+    // margin-top: 15px;
+    .portfolio-item__inner{
+        width: 100%;
+        height: 100%;
+        padding-top: 7%;
+        display: table;
+        table-layout: fixed;
+    }
+    .portfolio-item__section--logo{
+        display: table-cell;
+        vertical-align: middle;
+        padding:0 10% 0 12%;
+        position: relative;
+    }
+    .portfolio-item__logo{
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        transform: translateX(-205%);
+        float: left;
+        top: 175px;
+
+    }
+    .portfolio-item__title{
+        font-size: 80px;
+        font-weight: 400;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .portfolio-item__annotation{
+        font-size: 16px;
+        max-width: 400px;
+    }
+    .portfolio-item__section--desc-wr{
+        display: table-cell;
+        vertical-align: middle;
+        .portfolio-item__section--desc__card{
+            margin-bottom: 30px;
+        }
+        .row:last-child{
+            .portfolio-item__section--desc__card{
+                margin-bottom: 0px;
+            }
+        }
+    }
+    &#prez{
+        background-image: linear-gradient(90deg, #bf6364, #fc966c);
+    }
+    &#astkol{
+        background-image: linear-gradient(90deg, #421e3a, #943954);
+    }
+    &:first-child{
+        .portfolio-item__inner{
+            // transform: translateY(-75%);
+            height: 83%;
+            padding-top: 0;
+        }
+    }
+}
