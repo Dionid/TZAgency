@@ -27,12 +27,12 @@ $(document).ready(function(){
             if(!hidden && offsetTop > lastSrollTop){
                 for (let nav of menus) {
                     hidden = true;
-                    nav.classList.remove("display");
+                    nav.classList.remove('display');
                 }
             } else if (hidden && offsetTop < lastSrollTop){
                 for (let nav of menus) {
                     hidden = false;
-                    nav.classList.add("display");
+                    nav.classList.add('display');
                 }
             }
             lastSrollTop = offsetTop;
