@@ -4,26 +4,28 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import "variables.scss";
+
 html{
     background-color: #f6f6f6;
 }
 
 html, body, .main-wr{
-    // height: 100%;
     width: 100%;
     padding: 0;
 }
 
 body{
-    // box-shadow: 0 2px 16px rgba(0,0,0,0.2);
-    // margin-top: 3%;
     margin-top: 50px;
-    // max-width: 1360px;
-    // max-width: 93.5%;
+    font-size: 15px;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Museo Sans Cyrl','Lato',Verdana,Arial,sans-serif;
+    @media (max-width: 768px){
+        max-width: 100%;
+        margin-top: 0;
+    }
 }
 
 .main-wr{
@@ -81,53 +83,22 @@ p{
 
 .main-cols{
     height: 100%;
-    // border-right: 1px #eee solid;
     box-shadow: 5px 0 16px rgba(0, 0, 0, 0.03);
+    @media (max-width: 768px){
+        display: none;
+    }
 }
 
 .bg-wr{
     height: 100%;
     width: 100%;
-    // position: fixed;
     position: absolute;
     left: 0;
     top: 0;
     margin: 0;
 }
 
-.services{
-    // background-color: #222;
-    position: relative;
-    // color: #fff;
-    padding: 60px 0 120px 0;
-    margin: 15px 30px 15px;
-    .cols{
-        // border-right:1px solid rgba(255,255,255,0.3);
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    .services-item{
-        width: 100%;
-        height: 300px;
-        // background-color: rgba(255,255,255,0.2);
-        margin-bottom: 30px;
-        // background-color: #fff;
-        // color: #fff;
-        border-radius: 5px;
-        padding: 17%;
-        text-align: center;
-        .service-icon{
-            background-color: #eee;
-            width: 60px;
-            height: 60px;
-            margin: 0px auto 0 auto;
-            border-radius: 50%;
-        }
-        .service-title{
-            text-align: center;
-        }
-    }
-}
+@import "services.scss";
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -139,6 +110,7 @@ p{
 .text-title-2{
     color: inherit;
     font-size: 6.1em;
+    font-size: 90px;
     font-weight: 100;
     margin-bottom: 60px;
     margin-top: 0;
@@ -147,16 +119,21 @@ p{
 
 .text-title--shadow{
     position: absolute;
-    opacity: 0.04;
-    left: -100px;
-    font-size: 31em;
+    opacity: 0.03;
+    left: -90px;
+    font-size: 28em;
     font-weight: 700;
     top: 50%;
     transform: translateY(-50%);
+    @media (max-width: 768px){
+        display: none;
+    }
 }
 
 .text-title--shadow--sm{
-    font-size: 22em;
+    left: -50px;
+    top: 35%;
+    font-size: 19em;
 }
 
 .text-title-3{
@@ -168,10 +145,77 @@ p{
     // margin-left: 30px;
 }
 
+.section__logo{
+    @media (max-width: 768px){
+        padding: 60px 30px;
+    }
+}
+
 .logo-title{
     font-size: 69px;
     font-weight: 300;
     letter-spacing: 6px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.logo-title_subtext{
+    position: absolute;
+    left: 127%;
+    width: 200px;
+    margin: 0;
+    top: 63%;
+    font-size: 15px;
+    color: #888;
+    font-family: "Helvetica";
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
+
+.logo-title__first{
+    letter-spacing: 13px;
+}
+
+.logo-title__second{
+    letter-spacing: 8px;
+}
+
+.logo-title__third{
+    letter-spacing: 11px;
+}
+
+.logo-title_circles{
+    margin-left: 10px;
+}
+
+.logo-title_circle{
+    border-radius: 50%;
+    background-color: #545454;
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    margin-right: 74px;
+    &.logo-title_circle__1{
+        // margin-right: 71px;
+    }
+    &.logo-title_circle__4{
+        margin-left: 3px;
+        margin-right: 69px;
+    }
+    &.logo-title_circle__5{
+        background-color: $color__golden__light;
+        width: 12px;
+        height: 12px;
+        // margin-left: 3px;
+        // margin-right: 71px;
+    }
+    &.logo-title_circle__6{
+        margin-left: 4px;
+        // margin-right: 71px;
+    }
+    &:last-child{
+        margin-right: 0;
+    }
 }
 
 @media (min-width: 1200px){
@@ -187,16 +231,29 @@ p{
 // Clients
 
 .clients{
+    margin-top: -30%;
     .client{
         border-radius: 50%;
         width: 100px;
         height: 100px;
         margin-bottom: 15px;
-        // background-color: #eee;
         background-color: #fff;
         box-shadow: inset 4px 0 16px rgba(0, 0, 0, 0.07);
         margin-left: auto;
-        // margin-right: auto;
+        margin-right: auto;
+        overflow: hidden;
+        position: relative;
+    }
+    .client_logo{
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        opacity: 0.8;
+    }
+    @media (max-width: 768px){
+        margin-top: 30px;
     }
 }
 
@@ -211,8 +268,40 @@ p{
 }
 
 // Contacts
-.section--contacts{
-    padding: 120px 0 240px;
+.section__contacts{
+    padding: 120px 0 120px;
+}
+
+.contacts_content{
+    margin-top: 30px;
+    padding-left: 25px;
+    padding-right: 30px;
+}
+
+.contacts_table td{
+    padding: 5px 0 15px 15px;
+    font-size: 20px;
+    vertical-align: top;
+    font-weight: 100;
+}
+
+td.contacts_name{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.contacts_img{
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+
+.contacts_map-wr{
+    height: 350px;
+    margin-top: 120px;
+    background-color: #eee;
+    padding: 0;
 }
 
 // Util

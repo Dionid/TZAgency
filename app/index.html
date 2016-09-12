@@ -38,24 +38,25 @@
                 <div class="col-md-2 main-cols"></div>
             </div>
         </div>
-        <nav class="navigation navigation--top">
+        <nav class="navigation navigation__top display">
             <ul class="navigation-menu">
-                <li class="navigation-menu__link text-left">Three Zeta Studio</li>
-                <li class="navigation-menu__link text-right"></li>
-                <li class="navigation-menu__link text-left">Услуги</li>
-                <li class="navigation-menu__link text-left">Наши работы</li>
-                <li class="navigation-menu__link text-left">Веб-консалтинг</li>
-                <li class="navigation-menu__link text-left">Контакты</li>
+                <li class="navigation-menu_li navigation-menu_li__double text-left">Three Zeta Studio</li>
+                <!-- <li class="navigation-menu_li text-right"></li> -->
+                <li class="navigation-menu_li text-right"></li>
+                <li class="navigation-menu_li text-left"><a class="navigation-menu_link" href="#services">Услуги</a></li>
+                <li class="navigation-menu_li text-left">Наши работы</li>
+                <!-- <li class="navigation-menu_li text-left">Веб-консалтинг</li> -->
+                <li class="navigation-menu_li text-left">Контакты</li>
             </ul>
         </nav>
-        <nav class="navigation navigation--bot">
+        <nav class="navigation navigation__bot display">
             <ul class="navigation-menu">
-                <li class="navigation-menu__link text-left"></li>
-                <li class="navigation-menu__link text-right"></li>
-                <li class="navigation-menu__link text-center"></li>
-                <li class="navigation-menu__link text-center"></li>
-                <li class="navigation-menu__link text-right"><b>Тел:</b><br>+7 (903) 572-98-38</li>
-                <li class="navigation-menu__link text-right"><b>Почта:</b> mail@threezeta.com</li>
+                <li class="navigation-menu_li text-left"></li>
+                <li class="navigation-menu_li text-right"></li>
+                <li class="navigation-menu_li text-center"></li>
+                <li class="navigation-menu_li text-center"></li>
+                <li class="navigation-menu_li text-right"><b>Тел:</b><br>+7 (903) 572-98-38</li>
+                <li class="navigation-menu_li text-right"><b>Почта:</b> mail@threezeta.com</li>
             </ul>
         </nav>
         <section class="section--fullscreen">
@@ -63,21 +64,37 @@
                 <div class="section--fullscreen_inner">
                     <div class="row">
                         <div class="col-md-2"></div>
-                        <div class="col-md-2">
-                            <h1 class="logo-title">three</h1>
-                            <h1 class="logo-title">zeta</h1>
-                            <h1 class="logo-title">studio</h1>
-                            <button class="btn btn-default">Наши кейсы</button>
+                        <div class="col-md-2 section__logo">
+                            <h1 class="logo-title logo-title__first">three</h1>
+                            <div class="logo-title_circles">
+                                <span class="logo-title_circle logo-title_circle__1"></span>
+                                <span class="logo-title_circle logo-title_circle__2"></span>
+                                <span class="logo-title_circle logo-title_circle__3"></span>
+                            </div>
+                            <h1 class="logo-title logo-title__second">zeta</h1>
+                            <div class="logo-title_circles">
+                                <span class="logo-title_circle logo-title_circle__4"></span>
+                                <span class="logo-title_circle logo-title_circle__5"></span>
+                            </div>
+                            <h1 class="logo-title logo-title__third">studio</h1>
+                            <h2 class="logo-title_subtext">агентство<br>веб-консалтинга</h2>
+                            <div class="logo-title_circles mb-xs">
+                                <span class="logo-title_circle logo-title_circle__6"></span>
+                                <span class="logo-title_circle logo-title_circle__7"></span>
+                                <span class="logo-title_circle logo-title_circle__8"></span>
+                            </div>
+                            <a href="#portfolio" class="btn btn-default" style="margin-top:30px;">Наши кейсы</a>
                         </div>
                         <div class="col-md-2"></div>
                         <div class="col-md-2"></div>
                         <div class="col-md-2">
                             <div class="clients">
-                                <div class="client"></div>
+                                <div class="client"><img class="client_logo" src="./images/mail.png" alt="" /></div>
                                 <div class="client"></div>
                                 <div class="client"></div>
                                 <div class="client"></div>
                             </div>
+                            <div class="clearfix"></div>
                         </div>
                         <div class="col-md-2"></div>
                     </div>
@@ -85,72 +102,76 @@
             </div>
         </section>
 
-        <section class="section--main services">
+        <section id="services" class="section--main services">
             <div class="">
                 <div class="row">
                     <h2 class="text-title-2 text-center">Услуги</h2>
                     <h2 class="text-title-2 text-title--shadow text-center">Услуги</h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 cols">
-                        <div class="services-item">
-                            <div class="service-icon"></div>
-                            <h3 class="service-title">Создание сайтов</h3>
-                            <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <div class="col-md-4 cols services-list_item">
+                      <div class="service">
+                          <div class="service_icon"></div>
+                          <h3 class="service_title">Создание сайтов</h3>
+                          <p class="service_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 cols services-list_item">
+                      <div class="service">
+                          <div class="service_icon"></div>
+                          <h3 class="service_title">Мобильные приложения</h3>
+                          <p class="service_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 cols services-list_item">
+                      <div class="service">
+                          <div class="service_icon"></div>
+                          <h3 class="service_title">Продвижение</h3>
+                          <p class="service_desc">Реклама в социалных сетях, поисковиках</p>
+                      </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 cols services-list_item">
+                        <div class="service">
+                            <div class="service_icon"></div>
+                            <h3 class="service_title">Веб-аналитика</h3>
+                            <p class="service_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                     </div>
-                    <!-- <div class="col-md-4 cols">
-                        <div class="services-item">
-                            <div class="service-icon"></div>
-                            <h3 class="service-title">Мобильные приложения</h3>
-                            <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div> -->
-                    <div class="col-md-4 cols">
-                        <div class="services-item">
-                            <div class="service-icon"></div>
-                            <h3 class="service-title">Веб-консалтинг</h3>
-                            <p class="service-desc">Комплекс действий по увеличению прибыли с проекта</p>
+                    <div class="col-md-4 cols services-list_item">
+                        <div class="service">
+                            <div class="service_icon service_icon__golden"></div>
+                            <h3 class="service_title">Веб-консалтинг</h3>
+                            <p class="service_desc">Комплекс действий по увеличению прибыли с проекта</p>
                         </div>
                     </div>
-                    <div class="col-md-4 cols">
-                        <div class="services-item">
-                            <div class="service-icon"></div>
-                            <h3 class="service-title">Продвижение</h3>
-                            <p class="service-desc">Реклама в социалных сетях, поисковиках</p>
-                        </div>
+                    <div class="col-md-4 cols services-list_item">
                     </div>
                 </div>
-                <!-- <div class="row">
-                    <div class="col-md-3 cols">
-                        <div class="services-item">
-                            <div class="service-icon"></div>
-                            <h3 class="service-title">Создание сайтов</h3>
-                            <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 cols">
-                        <div class="services-item">
-                            <div class="service-icon"></div>
-                            <h3 class="service-title">Мобильные приложения</h3>
-                            <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 cols">
-                        <div class="services-item">
-                            <div class="service-icon"></div>
-                            <h3 class="service-title">Веб-аналитика</h3>
-                            <p class="service-desc">Комплекс действий по увеличению прибыли с проекта</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 cols">
-                        <div class="services-item">
-                            <div class="service-icon"></div>
-                            <h3 class="service-title">Продвижение</h3>
-                            <p class="service-desc">Реклама в социалных сетях, поисковиках</p>
-                        </div>
-                    </div>
-                </div> -->
+                <div class="row">
+                  <div class="col-md-4 cols services-list_item">
+                      <div class="service">
+                          <div class="service_icon"></div>
+                          <h3 class="service_title">Маркетинговые стратегии</h3>
+                          <p class="service_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 cols services-list_item">
+                      <div class="service">
+                          <div class="service_icon"></div>
+                          <h3 class="service_title">Поддержка</h3>
+                          <p class="service_desc">Реклама в социалных сетях, поисковиках</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 cols services-list_item">
+                      <div class="service">
+                          <div class="service_icon"></div>
+                          <h3 class="service_title">Развитие продуктов</h3>
+                          <p class="service_desc">Реклама в социалных сетях, поисковых системах</p>
+                      </div>
+                  </div>
+                </div>
             </div>
 
         </section>
@@ -318,54 +339,60 @@
                 </div>
             </div>
         </section>
-        <section class="section--main section--web-analysis">
-            <div>
-                <div class="row">
-                    <div class="col-sm-offset-2 col-sm-9"><h2 class="text-title-3">Предложение по веб-аналитике</h2></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-2">
-                        <p class="text-body text-body--thin text-body--lg">Нами было проанализировано более 100 компаний
-                            и итогом этого стало понимание, что большинство из них теряют
-                            прибыль из-за шаблонных ошибок на сайтах, а многие не способны
-                            получать больше, поскольку не работают с нужными показателями</p>
-                        <p class="text-body text-body--thin text-body--lg">Дайте себе ответы на следующие вопросы:
-                        <br>На вашем сайте присутствуют системы сбора аналитики?
-                        <br>Делаете ли вы или вашими маркетологи ежемесяыне отчеты
-                        по показателям систем аналитики?
-                        <br>Если да, то данные отчеты говорят о конечной, полученной прибыли?</p>
-                        <p class="text-body text-body--thin text-body--lg">Если хотя бы на один из вопросов ответ: "Нет" - тогда вам необходима веб-аналитика</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section--main section--contacts">
-            <div>
+        <section class="section--main section__contacts">
+            <div class="contacts">
                 <h2 class="text-title-2 text-title--shadow--sm text-title--shadow">Контакты</h2>
                 <div class="row">
-                    <div class="col-sm-5 col-sm-offset-1">
-                        <img src="images/mail.png" alt="" width="100%"/>
+                    <div class="col-sm-12">
+                        <img class="contacts_img" src="images/mail.png" alt=""/>
                     </div>
-                    <div class="col-sm-5">
-                        <div class="row">
+                    <div class="col-sm-4 col-sm-offset-2 contacts_content">
                             <div class="col-sm-6">
                                 <h2 class="text-title-3">Контакты</h2>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
+                            <table class="contacts_table">
+                                <tr>
+                                    <td class="contacts_name">
+                                        Телефон:
+                                    </td>
+                                    <td>
+                                        +7 (903) 572-98-38
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="contacts_name">
+                                        Email:
+                                    </td>
+                                    <td>
+                                        mail@threezeta.com
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="contacts_name">
+                                        Адрес:
+                                    </td>
+                                    <td>
+                                        г. Москва, Протопоповский переулок, до 19/12
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- <div class="col-sm-12">
                                 <p class="text-body text-body--lg text-body--thin">
                                     <b>Телефон:</b> +7 (903) 572-98-38
                                 </p>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                                 <p class="text-body text-body--lg text-body--thin">
                                     <b>Email:</b> mail@threezeta.com
                                 </p>
                             </div>
-                        </div>
-                        <br>
-                        <br>
+                            <div class="col-sm-12">
+                                <p class="text-body text-body--lg text-body--thin">
+                                    <b>Адрес:</b> г. Москва, Протопоповский переулок, до 19/12
+                                </p>
+                            </div> -->
+                    </div>
+                    <div class="col-sm-4 contacts_content">
                         <h2 class="text-title-3">Обратная связь</h2>
                         <form action="">
                             <div class="form-group">
@@ -380,7 +407,15 @@
                                 <!-- <label for="email">Телефон</label> -->
                                 <input class="form-control" placeholder="Телефон" type="text" id="tel">
                             </div>
+                                <button type="submit" name="button" class="btn btn-default">Отправить</button>
+                            <div class="btn-group btn-group-sm pull-right">
+                                <button type="submit" name="button" class="btn btn-default">Прикрепить бриф</button>
+                                <button type="submit" name="button" class="btn btn-default"> + </button>
+                            </div>
                         </form>
+                    </div>
+                    <div class="col-xs-12 contacts_map-wr">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=qwqEZfC24cfsr1L7zdViLV3hzTGWGDoG&amp;width=100%&amp;height=350&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
                     </div>
                 </div>
             </div>

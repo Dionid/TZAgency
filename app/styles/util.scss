@@ -1,3 +1,13 @@
+@import "variables.scss";
+
+a{
+    color: $color__text__main;
+    &:hover{
+        color: $color__golden__dark;
+        text-decoration: none;
+    }
+}
+
 .p-n{
     padding: 0;
 }
