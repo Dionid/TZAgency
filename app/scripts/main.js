@@ -9,8 +9,8 @@ $(document).ready(function(){
     let isMobile = window.mobilecheck();
 
     if(!isMobile){
-        $('.section--fullscreen').height($(window).height() - 51)
-        $('.portfolio-item').height($('.portfolio-item').width()*0.4)
+        $('.section--fullscreen').height($(window).height() - 101)
+        // $('.portfolio-item').height($('.portfolio-item').width()*0.3)
     }
 
     $(document).scroll((e)=>{

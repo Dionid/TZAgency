@@ -6,6 +6,8 @@ $icon-font-path: '../fonts/';
 
 @import "variables.scss";
 
+@import "fonts.scss";
+
 html{
     background-color: #f6f6f6;
 }
@@ -21,7 +23,7 @@ body{
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Museo Sans Cyrl','Lato',Verdana,Arial,sans-serif;
+    font-family: 'museo_sans_cyrl','Museo Sans Cyrl','Lato',Verdana,Arial,sans-serif;
     @media (max-width: 768px){
         max-width: 100%;
         margin-top: 0;
@@ -153,27 +155,44 @@ p{
 
 .logo-title{
     font-size: 69px;
-    font-weight: 300;
+    font-weight: 100;
     letter-spacing: 6px;
     margin: 0;
     margin-bottom: 8px;
 }
 
+// Снизу
+// .logo-title_subtext{
+//     position: absolute;
+//     left: 127%;
+//     width: 200px;
+//     margin: 0;
+//     top: 62%;
+//     font-size: 17px;
+//     color: #888;
+//     font-family: "Helvetica";
+//     font-weight: 100;
+//     letter-spacing: 1px;
+    // opacity: 0.5;
+// }
+
+// Центр
 .logo-title_subtext{
     position: absolute;
-    left: 127%;
+    left: 193px;
     width: 200px;
     margin: 0;
-    top: 63%;
-    font-size: 15px;
-    color: #888;
-    font-family: "Helvetica";
+    top: 34%;
+    font-size: 18px;
+    // color: #888;
+    // font-family: "Helvetica";
     font-weight: 100;
     letter-spacing: 0.5px;
+    opacity: 0.6;
 }
 
 .logo-title__first{
-    letter-spacing: 13px;
+    letter-spacing: 10px;
 }
 
 .logo-title__second{
@@ -191,10 +210,10 @@ p{
 .logo-title_circle{
     border-radius: 50%;
     background-color: #545454;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     display: inline-block;
-    margin-right: 74px;
+    margin-right: 75px;
     &.logo-title_circle__1{
         // margin-right: 71px;
     }
@@ -230,32 +249,7 @@ p{
 
 // Clients
 
-.clients{
-    margin-top: -30%;
-    .client{
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        margin-bottom: 15px;
-        background-color: #fff;
-        box-shadow: inset 4px 0 16px rgba(0, 0, 0, 0.07);
-        margin-left: auto;
-        margin-right: auto;
-        overflow: hidden;
-        position: relative;
-    }
-    .client_logo{
-        width: 90%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        opacity: 0.8;
-    }
-    @media (max-width: 768px){
-        margin-top: 30px;
-    }
-}
+@import "./clients.scss";
 
 // Portfolio
 
@@ -307,3 +301,4 @@ td.contacts_name{
 // Util
 
 @import './util.scss';
+@import './buttons.scss';
