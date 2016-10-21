@@ -4,6 +4,10 @@
     box-shadow: 0 0 30px rgba(0,0,0,.05);
 }
 
+.section__portfolio, .section--portfolio{
+    display: none;
+}
+
 .portfolio-items{
     position: relative;
     padding: 0;
@@ -193,5 +197,22 @@
             padding-bottom: 120px;
             // padding-top: 0;
         }
+    }
+}
+
+.portfolio_preview-wr{
+    padding: 15px;
+}
+
+.portfolio_preview{
+    // background-color: #f8f8f8;
+    // border: 1px #eee solid;
+    // background-color: #FFF;
+    padding: 30px;
+    padding-top: 60px;
+    .text-title-3{
+        color: #fff;
+        font-weight: 500;
+        opacity: 0.2;
     }
 }

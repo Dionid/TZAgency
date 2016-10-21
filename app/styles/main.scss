@@ -9,7 +9,7 @@ $icon-font-path: '../fonts/';
 @import "fonts.scss";
 
 html{
-    background-color: #f6f6f6;
+    background-color: #fff;
 }
 
 html, body, .main-wr{
@@ -23,6 +23,7 @@ body{
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: -7px 0 16px rgba(0, 0, 0, 0.02);
     font-family: 'museo_sans_cyrl','Museo Sans Cyrl','Lato',Verdana,Arial,sans-serif;
     @media (max-width: 768px){
         max-width: 100%;
@@ -107,44 +108,6 @@ p{
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
-}
-
-.text-title-2{
-    color: inherit;
-    font-size: 6.1em;
-    font-size: 90px;
-    font-weight: 100;
-    margin-bottom: 60px;
-    margin-top: 0;
-    // margin-left: 30px;
-}
-
-.text-title--shadow{
-    position: absolute;
-    opacity: 0.03;
-    left: -90px;
-    font-size: 28em;
-    font-weight: 700;
-    top: 50%;
-    transform: translateY(-50%);
-    @media (max-width: 768px){
-        display: none;
-    }
-}
-
-.text-title--shadow--sm{
-    left: -50px;
-    top: 35%;
-    font-size: 19em;
-}
-
-.text-title-3{
-    color: inherit;
-    font-size: 3em;
-    font-weight: 300;
-    margin-bottom: 30px;
-    margin-top: 0;
-    // margin-left: 30px;
 }
 
 .section__logo{
@@ -297,6 +260,8 @@ td.contacts_name{
     background-color: #eee;
     padding: 0;
 }
+
+@import "./typo.scss";
 
 // Util
 
