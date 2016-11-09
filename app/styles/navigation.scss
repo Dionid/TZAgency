@@ -11,6 +11,7 @@
     padding: 0 2.5%;
     background-color: rgba(255,255,255,1);
     transition: 0.3s;
+    min-height: 51px;
     // box-shadow: inset -11px 84px 16px rgba(255, 255, 255, 1);
     &.navigation__top{
         top: 0;
@@ -26,6 +27,12 @@
         transform: translateY(100%);
         &.display{
             transform: translateY(0);
+        }
+        @media (max-width: 1024px){
+            .navigation-menu_li *{
+                display: none;
+                font-size: 12px;
+            }
         }
     }
     @media (max-width: 768px){

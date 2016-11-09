@@ -8,4 +8,13 @@
 
 .btn-bordered{
 	border: 1px #eee solid;
+	@media (max-width: 768px){
+        margin-bottom: 15px;
+    }
+}
+
+#send_brief{
+	@media (max-width: 1024px){
+        display: none;
+    }
 }

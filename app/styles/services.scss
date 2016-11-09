@@ -28,15 +28,20 @@
             opacity: 1;
         }
     }
+    @media (max-width: 768px){
+        margin-bottom: 0;
+    }
 }
 
 .services-list_title{
-    position: absolute;
-    top:20px;
-    // transform: translateY(-50%);
-    width: 30%;
-    text-align: right;
-    // margin-left: 60px;
+    @media (min-width: 769px){
+        position: absolute;
+        top:20px;
+        // transform: translateY(-50%);
+        width: 30%;
+        text-align: right;
+        // margin-left: 60px;
+    }
 }
 
 .service{
@@ -54,6 +59,12 @@
     position: absolute;
     left: -10px;
     top: 55px;
+    @media (max-width: 768px){
+        top: 25px;
+        left: -11px;
+        background-color: $color__golden__light;
+            box-shadow: inset 6px 0 36px 15px rgba(0, 0, 0, 0.01);
+    }
 }
 
 .service_icon__golden{
@@ -74,6 +85,11 @@
     position: absolute;
     opacity: 0;
     transition: 0.2s;
+    @media (max-width: 1024px){
+        // margin-bottom: 15px;
+        opacity: 1;
+        position: relative;
+    }
 }
 
 .service_desc__special{
