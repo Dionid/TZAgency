@@ -4,6 +4,10 @@
     box-shadow: 0 0 30px rgba(0,0,0,.05);
 }
 
+#portfolio{
+    padding-top: 60px;
+}
+
 .section__portfolio, .section--portfolio{
     display: none;
 }
@@ -210,6 +214,10 @@
     &:hover{
         padding-left: 0;
         padding-right: 0;
+        .portfolio_desc{
+            padding-left: 45px;
+            padding-right: 45px;
+        }
     }
 }
 
@@ -258,12 +266,26 @@
     }
     &#astkol{
         background-image: linear-gradient(90deg, #421e3a, #943954);
+        .portfolio_logo-img{
+            width: 200px;
+            // height: 42px;
+        }
+    }
+    &#lustry{
+        .portfolio_logo-img{
+            width: 160px;
+            // height: 42px;
+        }
     }
     &#rucont{
         background-image: linear-gradient(90deg, #0b3352, #4a7dff);
     }
     &#rucontext{
         background-image: linear-gradient(90deg, #215480, #4eccf7);
+        .portfolio_logo-img{
+            height: 42px;
+            width: auto;
+        }
     }
     &#minstroy{
         background-color: #FFF;
@@ -279,6 +301,7 @@
 
 .portfolio_desc{
     padding: 100px 30px 45px;
+    transition: 0.5s;
 }
 
 .portfolio_title{

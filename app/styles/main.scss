@@ -131,11 +131,7 @@ p{
     font-weight: 100;
     letter-spacing: 6px;
     margin: 0;
-    margin-bottom: 8px;
-}
-
-.logo_subtitle{
-    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 .logo_special-text{
@@ -286,3 +282,8 @@ td.contacts_name{
 
 @import './util.scss';
 @import './buttons.scss';
+
+
+.logo_subtitle{
+    line-height: 1.5;
+}
