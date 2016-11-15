@@ -41,4 +41,45 @@ $(document).ready(function(){
 
 // Плавный скролл, мобильный бургер на React,
 
+    function addScript(src) {
+      var elem = document.createElement('script');
+      elem.src = src;
+      document.head.appendChild(elem);
+    }
+
+    window.onSendSuccess = function(data){
+        debugger
+        if(data && data.err){
+            alert('Произошла ошибка! Попробуйте еще раз')
+        }
+        if(data && data.success){
+            alert('Спасибо за сообщение! Мы свяжемся с вами в ближайшее время')
+        }
+        $('#feeaback-form-wr').removeClass('state__loading')
+        console.log(data)
+    }
+
+    $(document).on('click', '#sendEmail', (e)=>{
+        e.preventDefault();
+        let a = $('#feedback_form').serializeArray(),
+            values = {};
+        a.forEach(field=>{
+            values[field.name] = field.value;
+        });
+        if(values.email === '' && values.tel === ''){
+            alert('Заполните телефон или email')
+            return;
+        }
+        $('#feeaback-form-wr').addClass('state__loading')
+        // alert("Works")
+        // window.yaCounter38004840.reachGoal('send_email_pending');
+        console.log(values);
+
+        addScript('https://agile-river-96181.herokuapp.com/send-form?callback=onSendSuccess'+$('#feedback_form').serialize());
+        // addScript('http://localhost:5000/send-form?callback=onSendSuccess&'+$('#feedback_form').serialize());
+
+        // $.get('https://agile-river-96181.herokuapp.com/send-form', function(res){
+        //     console.log(res);
+        // })
+    })
 });

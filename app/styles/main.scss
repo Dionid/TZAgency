@@ -44,8 +44,14 @@ h3{
     margin: 0;
 }
 
-p{
+.main-logos{
+    margin-top: 60px;
+}
 
+.main-logos_item{
+    width: 150px;
+    display: inline-block;
+    // margin-right: 60px;
 }
 
 .text-body{
@@ -245,9 +251,7 @@ p{
 }
 
 .contacts_content{
-    margin-top: 30px;
-    padding-left: 25px;
-    padding-right: 30px;
+    padding: 30px 30px 30px 25px;
 }
 
 .contacts_table td{
@@ -286,4 +290,16 @@ td.contacts_name{
 
 .logo_subtitle{
     line-height: 1.5;
+}
+
+#feeaback-form-wr.state__loading::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.5);
+
 }
