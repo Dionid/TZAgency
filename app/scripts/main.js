@@ -75,7 +75,7 @@ $(document).ready(function(){
         // window.yaCounter38004840.reachGoal('send_email_pending');
         console.log(values);
 
-        addScript('https://agile-river-96181.herokuapp.com/send-form?callback=onSendSuccess'+$('#feedback_form').serialize());
+        addScript('https://agile-river-96181.herokuapp.com/send-form?callback=onSendSuccess&'+$('#feedback_form').serialize());
         // addScript('http://localhost:5000/send-form?callback=onSendSuccess&'+$('#feedback_form').serialize());
 
         // $.get('https://agile-river-96181.herokuapp.com/send-form', function(res){
