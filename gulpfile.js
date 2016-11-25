@@ -97,7 +97,7 @@ gulp.task('extras', () => {
 }).pipe(gulp.dest('docs'));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'docs']));
+gulp.task('clean', del.bind(null, ['.tmp', 'docs', '!docs/CNAME']));
 
 gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   browserSync({
