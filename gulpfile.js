@@ -4,6 +4,9 @@ const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
+var useref = require('gulp-useref');
+var rev = require('gulp-rev');
+var revReplace = require("gulp-rev-replace");
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -165,7 +168,23 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task("revision", ['lint', 'html', 'images', 'fonts', 'extras'],function(){
+  return gulp.src(["docs/**/*.css", "docs/**/*.js"])
+    .pipe(rev())
+    .pipe(gulp.dest('docs'))
+    .pipe(rev.manifest())
+    .pipe(gulp.dest('docs'))
+})
+
+gulp.task("revreplace", ["revision"], function(){
+  var manifest = gulp.src("./docs/rev-manifest.json");
+
+  return gulp.src("docs/index.html")
+    .pipe(revReplace({manifest: manifest}))
+    .pipe(gulp.dest('docs'));
+});
+
+gulp.task('build', ['revreplace'], () => {
   return gulp.src('docs/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
