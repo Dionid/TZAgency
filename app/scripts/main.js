@@ -59,6 +59,16 @@ $(document).ready(function(){
         console.log(data)
     }
 
+    $(document).on('click', '.portfolio_btn', (e)=>{
+        $('.tz-modals-wr').addClass('active');
+        $('body').css('overflow','hidden')
+    })
+
+    $(document).on('click', '.tz-modals-bg', (e)=>{
+        $('.tz-modals-wr').removeClass('active');
+        $('body').css('overflow','auto')
+    })
+
     $(document).on('click', '#sendEmail', (e)=>{
         e.preventDefault();
         let a = $('#feedback_form').serializeArray(),

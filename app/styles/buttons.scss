@@ -10,6 +10,7 @@
 	border: 1px #e8e8e8 solid;
 	@media (max-width: 768px){
         margin-bottom: 15px;
+        width: 100%;
     }
 }
 
@@ -17,4 +18,8 @@
 	@media (max-width: 1024px){
         display: none;
     }
+}
+
+.btn-toolbar__lg .btn:not(:first-child){
+	margin-left: 15px;
 }

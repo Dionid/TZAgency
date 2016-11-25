@@ -18,22 +18,26 @@ html, body, .main-wr{
 }
 
 body{
-    margin-top: 50px;
+    // padding-top: 50px;
     font-size: 15px;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 0 16px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 0 16px rgba(0, 0, 0, 0.03);
     font-family: 'museo_sans_cyrl','Museo Sans Cyrl','Lato',Verdana,Arial,sans-serif;
     @media (max-width: 768px){
         max-width: 100%;
-        margin-top: 0;
+        // padding-top: 0;
         box-shadow: none;
     }
 }
 
 .main-wr{
     position: relative;
+    padding-top: 50px;
+    @media (max-width: 768px){
+        padding-top: 0px;
+    }
 }
 
 section{
@@ -46,12 +50,20 @@ h3{
 
 .main-logos{
     margin-top: 60px;
+    @media (max-width: 768px){
+        text-align: center;
+    }
 }
 
 .main-logos_item{
     width: 150px;
     display: inline-block;
     // margin-right: 60px;
+    @media (max-width: 768px){
+        margin-bottom: 30px;
+        // margin-left: 25%;
+        // text-align: center;
+    }
 }
 
 .text-body{
@@ -138,6 +150,14 @@ h3{
     letter-spacing: 6px;
     margin: 0;
     margin-bottom: 15px;
+    display: inline-block;
+}
+
+.logo-subtitle{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    display: none;
 }
 
 .logo_special-text{
@@ -189,6 +209,8 @@ h3{
 
 .logo-title_circles{
     margin-left: 10px;
+    display: none;
+    margin-bottom: 15px;
 }
 
 .logo-title_circle{
@@ -197,7 +219,7 @@ h3{
     width: 4px;
     height: 4px;
     display: inline-block;
-    margin-right: 75px;
+    margin-right: 50px;
     &.logo-title_circle__1{
         // margin-right: 71px;
     }
@@ -246,16 +268,28 @@ h3{
 }
 
 // Contacts
+
+.contacts{
+    padding: 0 15px;
+}
+
 .section__contacts{
     padding: 0px 0 120px;
 }
 
 .contacts_content{
-    padding: 30px 30px 30px 25px;
+    // padding: 30px 30px 30px 25px;
+    padding: 30px;
+    margin: 0 -15px;
+    @media (max-width: 768px){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .contacts_table td{
-    padding: 5px 0 15px 15px;
+    // padding: 5px 0 15px 15px;
+    padding-bottom: 15px;
     font-size: 20px;
     vertical-align: top;
     font-weight: 100;
@@ -264,6 +298,7 @@ h3{
 td.contacts_name{
     font-size: 18px;
     font-weight: 400;
+    padding-right: 15px;
 }
 
 .contacts_img{
@@ -302,4 +337,129 @@ td.contacts_name{
     border-radius: 5px;
     background-color: rgba(0,0,0,0.5);
 
+}
+
+.tz-modals-wr{
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    z-index: 10000;
+    overflow: auto;
+    visibility: hidden;
+    &.active{
+        visibility: visible;
+        .modals-bg{
+            opacity: 1;
+        }
+        .block{
+            animation: goUp 1.5s;
+            -webkit-animation: goUp 1.5s;
+        }
+        .tz-modals-bg{
+            opacity: 1;
+        }
+    }
+}
+
+.tz-modals-bg{
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.tz-modal{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+}
+
+.tz-modal_inner{
+    position: relative;
+    z-index: 10;
+    left: 0;
+    max-width: 800px;
+    width: 100%;
+    right: 0;
+    margin: auto;
+    margin-bottom: 10%;
+}
+
+@keyframes goUp {   /* назовём анимацию: "goUp" */
+    from {
+      transform: translateY(100%);               /* от: left: 0px */
+    }
+    to {
+      transform: translateY(0%); /* до: left: 100%-50px */
+    }
+  }
+
+  /* Префикс для Chrome, Opera, Safari */
+  @-webkit-keyframes goUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+.case{
+    background-color: #FFF;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-animation-timing-function: ease-in-out; /* Safari 4.0 - 8.0 */
+    animation-timing-function: ease-in-out;
+    box-shadow: 0 0px 18px 1px rgba(0, 0, 0, 0.5);
+    // min-height: 1500px;
+    padding-bottom: 60px;
+}
+
+.case_head{
+    position: relative;
+    padding: 60px 60px 60px;
+    // text-align: center;
+    border-bottom: 1px #eee solid; 
+}
+
+.case_logo{
+    text-align: center;
+    max-width: 200px;
+}
+
+.case_menu-wr{
+    height: 52px;
+}
+
+.case_menu{
+    padding: 0 30px;
+    border-bottom: 1px #eee solid; 
+    background-color: #FFF;
+    width: 800px;
+}
+
+.case_menu-item{
+    display: inline-block;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: 0.1s;
+    border-bottom: 0px #fff solid; 
+    border-width: 3px;
+    &:hover{
+        // border-bottom: 3px $color__golden__dark solid; 
+        border-color: $color__golden__dark;
+    }
+}
+
+.case-section{
+    position: relative;
+    padding: 60px;
 }
