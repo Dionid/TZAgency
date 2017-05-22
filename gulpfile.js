@@ -7,6 +7,7 @@ const wiredep = require('wiredep').stream;
 var useref = require('gulp-useref');
 var rev = require('gulp-rev');
 var revReplace = require("gulp-rev-replace");
+const fs = require('fs')
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
