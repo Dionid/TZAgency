@@ -12,11 +12,15 @@ $(document).ready(function(){
   var wh = window.innerHeight
 
   // height: 615px;
+  // $('.tel img')[0].style.top = wh + 'px'
 
-  if (wh > 620 && wh < 801) {
+  let addBottomPos = '16%'
+
+  if (wh > 620 && wh < 840) {
     $('.tel')[0].style.top = wh - 615 + 'px'
-  } else {
-
+  } else if (wh > 840){
+    $('.tel')[0].style.top = (wh - 834)/2 + 'px'
+    addBottomPos = '5%'
   }
 
 
@@ -58,7 +62,7 @@ $(document).ready(function(){
 
   setTimeout(function(){
     $('.addBtn').velocity({
-      bottom: '16%',
+      bottom: addBottomPos,
     }, {
       duration: 500,
       easing: 'easeOutQuart',
